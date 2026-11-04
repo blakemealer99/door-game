@@ -5,6 +5,7 @@ int main()
     int doorChoice;
     int wizardChoice;
     int swordDamage = 0;
+    int dragonChoice;
 
 
     std::cout << "You see two doors. \n";
@@ -19,6 +20,11 @@ int main()
     if (doorChoice == 1)
     {
         std::cout << "A dragon appears!\n";
+
+        std::cout << "1. Fight the dragon\n";
+        std::cout << "2. Run away\n";
+        std::cout << "Choose: ";
+        std::cin >> dragonChoice;
     }
     else if (doorChoice == 2)
     {
