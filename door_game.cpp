@@ -6,12 +6,14 @@ int main()
     int wizardChoice;
     int swordDamage = 0;
     int dragonChoice;
+    int dungeonChoice;
 
 
     std::cout << "You see two doors. \n";
-    std::cout << "1. Red Door \n";
-    std::cout << "2. Blue Door \n";
-    std::cout << "3. Green Door \n";
+    std::cout << "1. Door 1 \n";
+    std::cout << "2. Door 2 \n";
+    std::cout << "3. Door 3 \n";
+    std::cout << "4. Door 4 \n";
 
 
     std::cout << "Choose a door: ";
@@ -25,6 +27,18 @@ int main()
         std::cout << "2. Run away\n";
         std::cout << "Choose: ";
         std::cin >> dragonChoice;
+
+        if (dragonChoice == 1)
+        {
+            if (swordDamage > 0)
+            {
+                std::cout << "You defeat the dragon with your magic sword!\n";
+            }
+            else
+            {
+                std::cout << "You are no match for the dragon!\n";
+            }
+        }
     }
     else if (doorChoice == 2)
     {
@@ -56,5 +70,19 @@ int main()
     {
         std::cout << "Invalid choice. Please choose a valid door.\n";
     }
+
+    if(doorChoice == 4)
+    {
+        std::cout << "*Click*. The door locks behind you. You found a dungon! Ahead are 5 other doors. \n";
+        std::cin >> dungeonChoice;
+
+        for(int i = 1; i <= 5; i++)
+        {
+            std::cout << "You see door " << i << ".\n";
+        }
+    }
+
+
+
     return 0;
 }
